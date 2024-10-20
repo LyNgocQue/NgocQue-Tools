@@ -158,7 +158,7 @@ class ModalForm(WPFWindow):
 		custom_message_box.ShowDialog()
 
 	def on_apply_to_view_click(self, sender, e):
-		t = Transaction(doc, 'Đánh sheet number')
+		t = Transaction(doc, 'Sheet Renumber')
 		t.Start()
 		ky_tu_ban_ve, so_bat_dau, Hau_to, kieu_seri, prefix, suffix = self.value_input()
 		self.select_elements()
