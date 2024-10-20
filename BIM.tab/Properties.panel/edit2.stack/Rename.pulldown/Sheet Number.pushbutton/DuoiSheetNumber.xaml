@@ -26,14 +26,14 @@
 			Background="#00110505"
 			FontSize="13"
 			Content="Prefix:"
+			Foreground="#FF0A000A"
 			Grid.Column="0"
 			Grid.Row="0"
 			HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="15,39,0,0"
+			Margin="15,38,0,0"
 			Width="65"
-			Height="27"
-			Foreground="#FF0A000A" />
+			Height="28.000000000000004" />
 		<TextBox
 			x:Name="hau_to"
 			TextAlignment="Center"
@@ -145,7 +145,7 @@
 			Grid.Row="0"
 			HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="235,38,0,0"
+			Margin="235,39,0,0"
 			Width="44"
 			Height="24" />
 		<TextBox
