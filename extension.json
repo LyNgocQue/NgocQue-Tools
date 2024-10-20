@@ -1,0 +1,41 @@
+{
+    "extensions": [
+        {
+            "builtin": "False",
+            "default_enabled": "True",
+            "type": "extension",
+            "rocket_mode_compatible": "True",
+            "name": "NgocQue-Tools",
+            "description": "Set of custom tools.",
+            "author": "Ly Ngoc Que",
+            "author_profile": "",
+            "url": "https://github.com/LyNgocQue/NgocQue-Tools.git",
+            "website": "",
+            "image": "",
+            "templates": {
+                "author": "",
+                "docpath": ""
+            },
+            "dependencies": []
+        },
+        {
+            "builtin": "False",
+            "default_enabled": "True",
+            "type": "extension",
+            "rocket_mode_compatible": "True",
+            "name": "LNQ-TOOLS",
+            "description": "Set of custom tools.",
+            "author": "Ly Ngoc Que",
+            "author_profile": "",
+            "url": "https://github.com/LyNgocQue/LNQ-TOOLS.git",
+            "website": "",
+            "image": "",
+            "templates": {
+                "author": "",
+                "docpath": ""
+            },
+            "dependencies": []
+        }
+
+    ]
+}
