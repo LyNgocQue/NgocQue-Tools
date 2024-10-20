@@ -144,7 +144,7 @@ class ModalForm(WPFWindow):
 			return
 		zfill_length = len(kieu_seri)
 		count = so_bat_dau
-		message_lines = ["KẾT QUẢ VAR", "Kiểm tra thứ tự sắp xếp của sheet number cũ", "Nếu thứ tự của sheet number cũ đúng thì số thứ tự sẽ duỗi đúng !","-" * 75 ]
+		message_lines = ["KẾT QUẢ VAR", "Kiểm tra thứ tự sắp xếp của sheet number cũ", "Nếu thứ tự của sheet number cũ đúng thì số thứ tự sẽ đổi đúng !","-" * 75 ]
 		for item in sorted_list_sheet:
 			if isinstance(item, tuple):
 				sheet_number = item[0]  # Lấy sheet_number từ tuple
