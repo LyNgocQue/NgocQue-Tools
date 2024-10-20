@@ -103,7 +103,7 @@ try:
 			for obj in self.selected_elements1:
 				ele2 = doc.GetElement(obj)
 				category = (ele2.Category).Name
-				Height_offset_from_level = ele2.LookupParameter("Height Offset From Level").AsValueString()
+				Height_offset_from_level = ele2.LookupParameter("Height Offset From Level").AsDouble()*304.8
 				new_name = self.text1.Text + str(Height_offset_from_level) + text_3
 				cats = List[ElementId]()
 				category_map = {
@@ -150,7 +150,7 @@ try:
 			for obj in self.selected_elements1:
 				ele2 = doc.GetElement(obj)
 				category = (ele2.Category).Name
-				Height_offset_from_level = ele2.LookupParameter("Height Offset From Level").AsValueString()
+				Height_offset_from_level = ele2.LookupParameter("Height Offset From Level").AsDouble()*304.8
 				new_name = self.text1.Text + str(Height_offset_from_level) + text_3
 				cats = List[ElementId]()
 				category_map = {
