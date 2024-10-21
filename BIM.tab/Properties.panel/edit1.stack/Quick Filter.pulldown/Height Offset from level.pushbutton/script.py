@@ -104,7 +104,8 @@ try:
 				ele2 = doc.GetElement(obj)
 				category = (ele2.Category).Name
 				Height_offset_from_level = ele2.LookupParameter("Height Offset From Level").AsDouble()*304.8
-				new_name = self.text1.Text + str(Height_offset_from_level) + text_3
+				Height_offset_from_level_name = int(Height_offset_from_level) if Height_offset_from_level.is_integer() else round(Height_offset_from_level, 2)
+				new_name = self.text1.Text + str(Height_offset_from_level_name) + text_3
 				cats = List[ElementId]()
 				category_map = {
 									"Floors": BuiltInCategory.OST_Floors,
@@ -151,7 +152,9 @@ try:
 				ele2 = doc.GetElement(obj)
 				category = (ele2.Category).Name
 				Height_offset_from_level = ele2.LookupParameter("Height Offset From Level").AsDouble()*304.8
-				new_name = self.text1.Text + str(Height_offset_from_level) + text_3
+				Height_offset_from_level = ele2.LookupParameter("Height Offset From Level").AsDouble() * 304.8
+				Height_offset_from_level_name = int(Height_offset_from_level) if Height_offset_from_level.is_integer() else round(Height_offset_from_level, 2)
+				new_name = self.text1.Text + str(Height_offset_from_level_name) + text_3
 				cats = List[ElementId]()
 				category_map = {
 									"Floors": BuiltInCategory.OST_Floors,

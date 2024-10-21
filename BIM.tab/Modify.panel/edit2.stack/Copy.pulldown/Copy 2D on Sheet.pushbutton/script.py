@@ -20,9 +20,12 @@ elementToCopy = uidoc.Selection.GetElementIds()
 list_category = []
 for j in elementToCopy:
 	element_copy = doc.GetElement(j)
-	type_element_copy = (element_copy.GetTypeId()).IntegerValue
 	category = (element_copy.Category).Name
 	list_category.append(category)
+	if category == "Viewports":
+		type_element_copy = (element_copy.ViewId).IntegerValue
+	else:
+		type_element_copy = (element_copy.GetTypeId()).IntegerValue
 	
 
 selected_sheets = select_sheets(__title__,multiple=True,
@@ -42,7 +45,7 @@ for x in list_category:
 
 			list_type_element=[]
 			for k in existing_vps:
-				type_element = (k.GetTypeId()).IntegerValue
+				type_element = (k.ViewId).IntegerValue
 				list_type_element.append(type_element)
 
 			if type_element_copy not in list_type_element:
@@ -50,7 +53,7 @@ for x in list_category:
 				ElementTransformUtils.CopyElements(view, elementToCopy, sht, transform, opts)
 			elif type_element_copy  in list_type_element:
 				print("di chuyển")
-				existing_element = next((e for e in existing_vps if (e.GetTypeId().IntegerValue == type_element_copy)), None) 
+				existing_element = next((e for e in existing_vps if ((e.ViewId).IntegerValue == type_element_copy)), None) 
 				if existing_element:
 					doc.Delete(existing_element.Id)
 					ElementTransformUtils.CopyElements(view, elementToCopy, sht, transform, opts)
